@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+  }
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    background-color: var(--very-light-gray-background-headings-buttons);
+    color: var(--white-paragraphs);
+    font-size: 15px;
+  }
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+/********************************************************************/
+article{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    margin: 100px auto;
+    place-content: center;
+}
+section{
+    padding: 2rem;
+}
+#sedan{
+    background-color: var(--bright-orange);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+#suv{
+    background-color: var(--dark-cyan);
+}
+#luxury{
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.title{
+    color: var(--very-light-gray-background-headings-buttons);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2rem;
+    margin-block: 1rem;
+}
+.info{
+    width: 88%;
+    margin-bottom: 5rem;
+}
+button{
+    cursor: pointer;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 2rem;
+}
+#sedan-btn{
+    color: var(--bright-orange);
+    border-color: var(--bright-orange);
+}
+#suv-btn{
+    color: var(--dark-cyan);
+    border-color: var(--dark-cyan);
+}
+#luxury-btn{
+    color: var(--very-dark-cyan);
+    border-color: var(--very-dark-cyan);
+}
+#sedan-btn:hover{
+    color: var(--very-light-gray-background-headings-buttons);
+    background-color: var(--bright-orange);
+    border-color: var(--very-light-gray-background-headings-buttons);
+}
+#suv-btn:hover{
+    color: var(--very-light-gray-background-headings-buttons);
+    background-color: var(--dark-cyan);
+    border-color: var(--very-light-gray-background-headings-buttons);
+}
+#luxury-btn:hover{
+    color: var(--very-light-gray-background-headings-buttons);
+    background-color: var(--very-dark-cyan);
+    border-color: var(--very-light-gray-background-headings-buttons);
+}
+/********************************************************************/
+@media(max-width: 902px){
+    article{
+        width: 70%;
+        display: block;
+    }
+    #sedan{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5rem;
+    }
+    #luxury{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0.5rem;
+    }
+}
+@media(max-width: 425px){
+    article{
+        width: 300px;
+    }
+}
